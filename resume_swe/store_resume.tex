@@ -1,0 +1,232 @@
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[super]{nth}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape James Hoang} \\ \vspace{7pt}
+    \small (250)-268-6010 $ | $
+    \href{mailto:qmh1@sfu.ca}{\underline{qmh1@sfu.ca}} $ | $
+    \href{https://www.linkedin.com/in/jameshoang06/}{\underline{\faLinkedin \hspace{1pt} linkedin.com/in/jameshoang06/}} $ | $
+    \href{https://github.com/James-hg}{\underline{\faGithub \hspace{1pt} github.com/James-hg}} $ | $
+    \href{https://www.jameshoang.com/}{\underline{\faGlobe \hspace{1pt} jameshoang.com}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Simon Fraser University}{Expected Graduation Date: May 2028}
+{Bachelor of Science, Computing Science}{\textbf{}}
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+          \textbf{Programming Languages}{: Python, Java, TypeScript, Javascript, SQL} \\
+          \textbf{Developer Tools}{: FastAPI, Spring Boot, React, Node.js} \\
+          \textbf{Web Development}{: Docker, PostgreSQL, AWS, Git, Vercel, REST APIs} \\
+          %  \textbf{Spoken Languages}{: English (with heavy Chinese accent), Alienese} \\
+          }}
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Featured Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\href{https://www.jameshoang.com/quizzz}{\faLink \hspace{1pt} \textbf{Quizzz}}\hspace{3pt}(Personal Project) $|$ \emph{Python, React, FastAPI, PostgreSQL}}{Jan 2026}
+\resumeItemListStart
+\resumeItem{Solo built full stack quiz platform converting DOCX and PDF into structured interactive MCQ sessions using React, FastAPI, and PostgreSQL}
+\resumeItem{Reduced manual question setup time by 90\% by automating document parsing and schema validation pipelines}
+\resumeItem{Designed normalized data model supporting imports, edits, and AI generated content, eliminating format inconsistencies across 3 content sources}
+\resumeItemListEnd
+\resumeProjectHeading
+{\href{https://www.jameshoang.com/pathfinder}{\faLink \hspace{1pt} \textbf{Pathfinder}}\hspace{3pt}(Hackathon - Stormhacks) $|$ \emph{Python, React, FastAPI, PostgreSQL}}{Oct 2025}
+\resumeItemListStart
+\resumeItem{Led backend development for AI powered travel planning web application converting natural language prompts into structured itinerary objects}
+\resumeItem{Implemented schema constrained LLM orchestration layer to reduce malformed outputs before frontend rendering}
+\resumeItem{Integrated external mapping APIs with backend validation logic to enforce distance aware and geographically consistent recommendations}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+\section{Additional Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\href{https://www.jameshoang.com/xp}{\faLink \hspace{1pt} \textbf{Escape from Windows}}\hspace{3pt}(Hackathon - Xhacks) $|$ \emph{Java, React, Springboot, SQL}}{Feb 2026}
+\resumeItemListStart
+\resumeItem{Led backend architecture for browser based puzzle adventure game using Spring Boot and REST APIs to manage game state and progression}
+\resumeItem{Separated puzzle evaluation logic from UI state to prevent client side manipulation and maintain consistent server validated progression}
+\resumeItem{Implemented branching state machine supporting multiple endings while preserving deterministic outcomes across user sessions}
+\resumeItemListEnd
+\resumeProjectHeading
+{\href{https://www.jameshoang.com/novel-to-audio}{\faLink \hspace{1pt} \textbf{Novel-to-audio}}\hspace{3pt}(Personal Project) $|$ \emph{Python, Gemini API, Google cloud TTS API}}{Jul 2025 - Aug 2025}
+\resumeItemListStart
+\resumeItem{Architected automated Python pipeline converting multi chapter web novel text into segmented audiobook files using AI preprocessing and TTS APIs}
+\resumeItem{Eliminated manual narration effort by automating text cleaning, segmentation, and batch audio generation workflows}
+\resumeItem{Containerized end to end pipeline with Docker to ensure reproducible execution across environments}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%   \resumeProjectHeading
+%       {\href{https://www.mindgeek.com/}{\faLink \hspace{1pt} \textbf{College Rejection Simulator}}\hspace{3pt}(FruitOS Game) $|$ \emph{BigSnake, ASUCB, ByteNotDacing}}{March 2019}
+%       \resumeItemListStart
+%         \resumeItem{To avoid heart breaks, this game prepares \textbf{aspiring high school} students to embrace college rejections on \textbf{Ivy day}.}
+%         \resumeItem{Implemented an \textbf{in-app purchase} system so students can access college acceptance simulator.}
+%       \resumeItemListEnd
+%-----------EXPERIENCE-----------
+% \section{Work Experience}
+%   \resumeSubHeadingListStart
+
+%     \resumeSubheading
+%       {Admission Officer}{September 2020 -- Present}
+%       {St. Anford Office of Admission and Financial Aid}{Berkeley, California, United States}
+%       \resumeItemListStart
+%         \resumeItem{Randomly select \textbf{50,000} qualified applicants to reject each year unless the applicants is a legacy or pays millions to William Rick Singer.}
+%       \resumeItemListEnd
+
+% \resumeSubheading
+%   {Software Engineer Intern}{July 2021 -- September 2021}
+%   {Some Big Scientist Name Company}{Mars, Solar system}
+%   \resumeItemListStart
+%     \resumeItem{Developed a \textbf{long range rocket} that can send ants to Mars and cost as little as a house in Bay Area.}
+%     \resumeItem{Tried every kind of snacks offered at the office, including \textbf{La Tiao} (Spicy Bar).}
+%     \resumeItem{Finished \textbf{500} Leetcode questions while the manager was off duty.}
+%   \resumeItemListEnd
+
+% \resumeSubheading
+%   {CurtainOS Developer}{January 2019 -- Present}
+%   {Self-Employed}{Blue Screen of Death}
+%   \resumeItemListStart
+%     \resumeItem{Fixed the \textbf{planet-wide} blackout caused by CurtainOS 8.}
+%     \resumeItem{Developed CurtainOS 11 task bar and widget section by \textbf{copying} FruitOS X.}
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+%-----------Leadership-----------
+\section{Leadership Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Volunteer Peer Tutor}{Sep 2025 - present}
+{Computing Science Peer Tutoring Program, SFU}{Burnaby, BC}
+\resumeItemListStart
+\resumeItem{Tutored 1st year CMPT students in programming fundamentals, data structures, and algorithmic reasoning across weekly drop in and scheduled sessions}
+\resumeItem{Diagnosed logic errors in student code and guided structured debugging strategies to improve assignment completion and exam readiness}
+\resumeItem{Clarified core concepts including recursion, complexity analysis, and memory models to reduce recurring conceptual misunderstandings}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+%  %-----------Recent Awards-----------
+%  \section{Recent Awards}
+%   \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Nobel Prize Winner in Computer Science}\hspace{1pt} (1 of 50,000 selected worldwide) $|$ \emph{Nobel Prize Committee} \hspace*{\fill} October 2021 \\
+%      \textbf{Hottest Guy in Frat}\hspace{1pt} (out of 300 guys) $|$ \emph{Girls in Frat} \hspace*{\fill} June 2021 \\
+%      \textbf{LeetCode King}\hspace{1pt} (\nth{1} place overall out of 700 no-sleep majors) $|$ \emph{LeetCoding 4 Big G Jobs} \hspace*{\fill} April 2020 \\
+%     }}
+%  \end{itemize}
+
+%-------------------------------------------
+\end{document}
